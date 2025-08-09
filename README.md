@@ -1,23 +1,31 @@
-Year Percent / Progress Bar
+## Year Percent / Progress Bar
 
-Designed exclusively for Linux, I have no idea how, or if, it works on Windows, and I have no interest in testing.
+Terminal command for Linux that outputs an ascii progress bar of how long there is left in the year.<br>
+Inspired by <a href="https://x.com/ProgressBar202_">this</a> Twitter account.
 
-Customization
+It should work on Windows, but I couldn't tell you where to start if you wanted to install it as a terminal command.
 
-You can change the progress bar width by compiling the program with a different value for it. It is very obviously highlighted in the code so im sure there wont be any trouble in finding it.
+## Customization
 
-Installation:
+You can change the progress bar width by recompiling it with a different value. I made sure to highlight the location of this in the code, so it should be easy to find.
 
-Place the compiled program (or a symlink to it) in a `bin` folder of your choosing.
-If you wish to change the command prefix, then rename the file while your at it by appending a new name to the destination.
-`mv /home/username/Downloads/program /usr/local/bin/yearprogress`
+Codebase is short enough to fit on a post-it note, so making any further adjustments should be simple enough.<br>
+The license on this code permits any use you see fit, so go ham.
 
-Reload the Bash or ZSH profile 
-`source ~/.bashrc`
+## Installation:
 
-You are now done, feel free to run the command to try it out!
-`yearprogress`
-`We are 14% of the way through 2025
-[#######-------------------------------------------]`
+Place the compiled program (or a symlink to it) in your `usr/bin` folder (or `bin`, depending on your flavor of linux). <br>
 
-If you are having trouble getting it to run, try verifying that your user has permissions to run the file
+If you wish to change the command prefix, then rename the file by appending a different name at the destination.<br>
+For example: `mv ~/Downloads/program /usr/local/bin/yearprogress`<br>
+Its important to note that the command prefix is *literally* the name of the file.
+
+Reload your Bash or ZSH profile<br>
+`source ~/.bashrc` or `source ~/.zshrc`
+
+Run the command to verify it works<br>
+`[moth@archlinux ~]$ yearprogress`<br>
+`We are 14% of the way through 2025`<br>
+`[#######-------------------------------------------]`<br>
+
+If you're having trouble getting it to run, verify that your user has permissions to run the file. Otherwise, you may have placed it in the wrong location, or aren't typing in what you named the program.
